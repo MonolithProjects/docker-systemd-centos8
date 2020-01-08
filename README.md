@@ -5,7 +5,7 @@
 <a href="https://hub.docker.com/repository/docker/monolithprojects/systemd-centos8"><img src="https://img.shields.io/docker/pulls/monolithprojects/systemd-centos8"/></a>
 <a href="https://hub.docker.com/repository/docker/monolithprojects/systemd-centos8"><img src="https://img.shields.io/docker/cloud/automated/monolithprojects/systemd-centos8?maxAge=2592000"/></a>
 
-CentOS8 docker image (based on actual base image version). I am using it with Molecule for Ansible role testing.
+CentOS8 docker image with enabled systemd. I am using it with Molecule for Ansible role testing.
 
 ## Tags
 
