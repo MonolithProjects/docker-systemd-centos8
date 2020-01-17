@@ -10,7 +10,7 @@ CentOS8 docker image with enabled systemd. I am using it with Molecule for Ansib
 ## Tags
 
   - `latest`: Latest version of the image
-
+  - `8.1.1911`: CentOS 8.1.1911
 
 ## How-to
 
