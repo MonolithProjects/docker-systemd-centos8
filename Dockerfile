@@ -11,6 +11,7 @@ ENV \
 RUN set -eux \
 	&& groupadd -g ${MY_GID} ${MY_GROUP} \
 	&& useradd -d /home/ansible -s /bin/bash -G ${MY_GROUP} -g ${MY_GID} -u ${MY_UID} ${MY_USER} \
+    && echo "%${MY_USER}        ALL=(ALL)       NOPASSWD: ALL" >> /etc/sudoers \
 	\
 	&& mkdir /home/ansible/.gnupg \
 	&& chown ansible:ansible /home/ansible/.gnupg \
