@@ -9,8 +9,8 @@ ENV \
 	MY_GID=1000
 
 RUN set -eux \
-	&& addgroup -g ${MY_GID} ${MY_GROUP} \
-	&& adduser -h /home/ansible -s /bin/bash -G ${MY_GROUP} -D -u ${MY_UID} ${MY_USER} \
+	&& groupadd -g ${MY_GID} ${MY_GROUP} \
+	&& adduser -m /home/ansible -s /bin/bash -G ${MY_GROUP} -D -u ${MY_UID} ${MY_USER} \
 	\
 	&& mkdir /home/ansible/.gnupg \
 	&& chown ansible:ansible /home/ansible/.gnupg \
