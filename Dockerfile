@@ -10,7 +10,7 @@ ENV \
 
 RUN set -eux \
 	&& groupadd -g ${MY_GID} ${MY_GROUP} \
-	&& adduser -m /home/ansible -s /bin/bash -G ${MY_GROUP} -D -u ${MY_UID} ${MY_USER} \
+	&& adduser -D -m /home/ansible -s /bin/bash -G ${MY_GROUP} -u ${MY_UID} ${MY_USER} \
 	\
 	&& mkdir /home/ansible/.gnupg \
 	&& chown ansible:ansible /home/ansible/.gnupg \
