@@ -1,7 +1,7 @@
 # CentOS8 Ansible Test Image
 
 <a href="https://github.com/MonolithProjects/docker-systemd-centos8/actions"><img src="https://github.com/MonolithProjects/docker-systemd-centos8/workflows/Dockerfile%20test/badge.svg?branch=master"/></a>
-<a href="https://hub.docker.com/repository/docker/monolithprojects/systemd-centos8"><img src="https://img.shields.io/microbadger/image-size/monolithprojects/systemd-centos8/master"/></a>
+<a href="https://hub.docker.com/repository/docker/monolithprojects/systemd-centos8"><img src="https://img.shields.io/microbadger/layers/monolithprojects/systemd-centos8"/></a>
 <a href="https://hub.docker.com/repository/docker/monolithprojects/systemd-centos8"><img src="https://img.shields.io/docker/pulls/monolithprojects/systemd-centos8"/></a>
 <a href="https://hub.docker.com/repository/docker/monolithprojects/systemd-centos8"><img src="https://img.shields.io/docker/cloud/automated/monolithprojects/systemd-centos8?maxAge=2592000"/></a>
 

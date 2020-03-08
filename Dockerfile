@@ -1,7 +1,25 @@
 FROM centos:8
 LABEL maintainer="Michal Muransky"
 WORKDIR /lib/systemd/system/sysinit.target.wants/
-ENV container=docker
+ENV \
+    container=docker \
+	MY_USER=ansible \
+	MY_GROUP=ansible \
+	MY_UID=1000 \
+	MY_GID=1000
+
+RUN set -eux \
+	&& groupadd -g ${MY_GID} ${MY_GROUP} \
+	&& useradd -d /home/ansible -s /bin/bash -G ${MY_GROUP} -g ${MY_GID} -u ${MY_UID} ${MY_USER} \
+    && echo "%${MY_USER}        ALL=(ALL)       NOPASSWD: ALL" >> /etc/sudoers \
+	\
+	&& mkdir /home/ansible/.gnupg \
+	&& chown ansible:ansible /home/ansible/.gnupg \
+	&& chmod 0700 /home/ansible/.gnupg \
+	\
+	&& mkdir /home/ansible/.ssh \
+	&& chown ansible:ansible /home/ansible/.ssh \
+	&& chmod 0700 /home/ansible/.ssh 
 
 RUN for i in * ; do [ "$i" = systemd-tmpfiles-setup.service ] || rm -f "$i" ; done ; \
     rm -f /lib/systemd/system/multi-user.target.wants/* ; \
