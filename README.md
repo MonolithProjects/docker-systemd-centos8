@@ -5,8 +5,9 @@
 <a href="https://hub.docker.com/repository/docker/monolithprojects/systemd-centos8"><img src="https://img.shields.io/docker/pulls/monolithprojects/systemd-centos8"/></a>
 <a href="https://hub.docker.com/repository/docker/monolithprojects/systemd-centos8"><img src="https://img.shields.io/docker/cloud/automated/monolithprojects/systemd-centos8?maxAge=2592000"/></a>
 
-Docker image with centos8 and enabled systemd. Image contains also `ansible` user (UID/GID 1000) with NOPASSWD:ALL sudo rights.  
-This docker image is ment to be used for development purpose. I do not recomend to use it in production.
+Docker image with centos8 and enabled systemd. Image is updated with the latest software updates on the 1st day in the month. Image contains also `ansible` user (UID/GID 1000) with NOPASSWD:ALL sudo rights.  
+
+**Note:** This docker image is ment to be used for Molecule Ansible tests and development purpose. I do not recomend to use it in production.
 
 ## Tags
 
